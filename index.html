@@ -12,6 +12,77 @@
       <div class="wrapper">
         <my-form></my-form>
       </div>
+
+      <template class="template__form">
+        <style>
+          .hint-form {
+            margin: 0 30px;
+          }
+
+          .input {
+            font-size: 16px;
+            padding: 4px;
+          }
+
+          .container {
+            min-width: 300px;
+            width: 100%;
+          }
+
+          .container__input {
+            width: 90%;
+          }
+
+          .result {
+            width: 50%;
+            min-width: 300px;
+          }
+
+          .result__input {
+            width: 90%;
+          }
+
+          .result__label {
+            display: block;
+            min-width: 10em;
+          }
+
+          .result__row {
+            margin-top: 1em;
+          }
+        </style>
+        <form class="hint-form">
+          <div class="container">
+            <p class="container__header"><strong>Компания или ИП</strong></p>
+            <input
+              class="container__input input"
+              id="party"
+              name="party"
+              type="text"
+              placeholder="Введите название, ИНН, ОГРН или адрес организации"
+            >
+          </div>
+
+          <div class="result">
+            <div class="result__row">
+              <label class="result__label">Краткое наименование</label>
+              <input class="result__input input" id="name_short">
+            </div>
+            <div class="result__row">
+              <label class="result__label">Полное наименование</label>
+              <input class="result__input input" id="name_full">
+            </div>
+            <div class="result__row">
+              <label class="result__label">ИНН / КПП</label>
+              <input class="result__input input" id="inn_kpp">
+            </div>
+            <div class="result__row">
+              <label class="result__label">Адрес</label>
+              <input class="input result__input" id="address">
+            </div>
+          </div>
+        </form>
+      </template>
     </div>
     <script src="./scripts/components/Form.js"></script>
   </body>
