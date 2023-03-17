@@ -7,10 +7,6 @@ class MyForm extends HTMLElement {
     this.attachShadow({mode: 'open'});
     this.shadowRoot.appendChild(this.formContent);
   }
-
-  connectedCallback() {
-    
-  }
 }
 
 customElements.define("my-form", MyForm);

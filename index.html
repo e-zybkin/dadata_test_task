@@ -10,7 +10,7 @@
   <body>
     <div class="page">
       <div class="wrapper">
-        <my-form></my-form>
+        <my-form id="myForm"></my-form>
       </div>
 
       <template class="template__form">
@@ -27,6 +27,17 @@
           .container {
             min-width: 300px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .container__dropdown {
+            width: 90%;
+            visibility: hidden;
+          }
+
+          .container__dropdown_opened {
+            visibility: visible;
           }
 
           .container__input {
@@ -50,6 +61,10 @@
           .result__row {
             margin-top: 1em;
           }
+
+          .result__row:first-of-type {
+            margin-top: 0;
+          }
         </style>
         <form class="hint-form">
           <div class="container">
@@ -61,6 +76,7 @@
               type="text"
               placeholder="Введите название, ИНН, ОГРН или адрес организации"
             >
+            <select class="container__dropdown"></select>
           </div>
 
           <div class="result">
@@ -84,6 +100,7 @@
         </form>
       </template>
     </div>
-    <script src="./scripts/components/Form.js"></script>
+    <script type="module" src="./scripts/components/Form.js"></script>
+    <script type="module" src="./pages/index.js"></script>
   </body>
 </html>
